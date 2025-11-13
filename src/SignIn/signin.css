@@ -1,0 +1,218 @@
+/* Custom CSS classes for text and color */
+.text-dark {
+  color: var(--Dark, #333);
+}
+
+.text-sf-ui-text {
+  font-family: "SF UI Text", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+
+.w-326 {
+  width: 326px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.ml-100px {
+  margin-left: 150px;
+}
+
+.mt-100px {
+  margin-top: 100px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.signUpButton {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Red, #d83241);
+  color: white;
+  margin-top: 30px;
+}
+
+.signInImg {
+  width: 183.828px;
+  height: 358.877px;
+}
+
+.signInImg1 {
+  position: relative;
+  left: 11rem;
+  bottom: 21rem;
+  height: 349px;
+}
+
+.col1 {
+  background: #fff;
+}
+
+.col2 {
+  background: var(--Background-grey, #f4f5fa);
+}
+
+.phoneLogo {
+  position: relative;
+  top: 8rem;
+  left: 5rem;
+}
+
+.NextDayLogo {
+  display: flex;
+  width: 200px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nextDayPosition {
+  position: relative;
+  bottom: 31rem;
+  left: 18rem;
+}
+
+.mealNextDay {
+  color: var(--Dark, #333);
+
+  /* Slogan */
+  font-family: SF UI Text;
+  font-size: 45px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 410px;
+}
+.mealNextDayDesc {
+  color: var(--Dark, #333);
+
+  /* Paragraph L */
+  font-family: SF UI Text;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  width: 280px;
+}
+.mainHeading {
+  color: var(--Dark, #333);
+
+  /* H4 */
+  font-family: SF UI Text;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.otherAccount {
+  display: flex;
+  width: 250px;
+  font-size: 12px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  height: 17px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.signUpButtonGrey {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Light-grey, #d9d9d9);
+  color: white;
+  margin-top: 30px;
+  color: var(--Grey, #9a9696);
+}
+@media only screen and (max-width: 600px) {
+  .phoneLogoMain {
+    display: none;
+  }
+  .mainHeading {
+    width: 325px;
+    position: relative;
+    right: 10rem;
+  }
+  .phoneNumber {
+    width: 326px;
+    height: 85px;
+    flex-shrink: 0;
+    position: relative;
+    right: 8rem;
+  }
+  .enterPhoneNumber {
+    width: 87vw;
+    height: 50px;
+    flex-shrink: 0;
+    position: relative;
+    right: 8rem;
+    bottom: 4rem;
+  }
+  .enterPhoneNumber input::placeholder {
+    font-size: 14px;
+  }
+  .enterCode{
+    width: 87vw;
+  position: relative;
+  right: 8rem;
+
+  }
+  .enterCodeInput {
+    width: 87vw;
+    height: 50px;
+    flex-shrink: 0;
+    position: relative;
+    right: 8rem;
+    /* bottom: rem; */
+  }
+  .signUpButton,
+  .signUpButtonGrey {
+    position: relative;
+    right: 8rem;
+    display: flex;
+    width: 87vw;
+    height: 47px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    bottom: 4rem;
+  }
+  .otherAccount {
+    display: flex;
+    width: 200px;
+    height: 17px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    right: 6rem;
+    bottom: 4rem;
+  }
+  .adjustedButtonStyle{
+    bottom: 1rem !important;
+  }
+}

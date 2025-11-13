@@ -1,0 +1,775 @@
+.logo-sizing {
+  width: 40.276px;
+  height: 30.276px;
+  flex-shrink: 0;
+}
+.mealBox {
+  border-radius: 10px;
+  border: 0.3px solid var(--Light-grey, #d9d9d9);
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(50, 50, 71, 0.06),
+    0px 2px 2px 0px rgba(50, 50, 71, 0.06);
+  width: 475px;
+  height: 195.245px;
+  flex-shrink: 0;
+}
+
+.menuPlan {
+  display: flex;
+  width: 170px;
+  height: 176px;
+  padding: 10px 0px 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+.mealPlanButton {
+  display: flex;
+  width: 174.847px;
+  height: 46.626px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--Red, #d83241);
+  color: white;
+  margin-top: 30px;
+  border-radius: 6px;
+}
+.mainContainerStage3{
+  position: relative;
+  left:2rem;
+}
+.activeStepTitle {
+  color: var(--Red, #d83241);
+  text-align: center;
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+}
+.InActiveStepTitle {
+  color: #c9ccce;
+  text-align: center;
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+}
+.mealBox2Stage2 {
+  border-radius: 10px;
+  border: 0.3px solid var(--Light-grey, #d9d9d9);
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(50, 50, 71, 0.06),
+    0px 2px 2px 0px rgba(50, 50, 71, 0.06);
+  width: 275px;
+  height: 195.245px;
+  flex-shrink: 0;
+}
+.mr-50px {
+  margin-right: 50px;
+}
+.saveText {
+  position: relative;
+  bottom: 24px;
+  right: 40px;
+  font-size: 15px;
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  justify-content: center;
+  height: 30px;
+  align-items: center;
+}
+.planText1 {
+  color: #000;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 70px;
+}
+.planText2 {
+  color: #000;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+.bestOption {
+  position: relative;
+  left: 85px;
+}
+.planText2Desc {
+  position: relative;
+  left: 20px;
+  top: 40px;
+}
+.formSize,.formSizeStage4,.formSizeStage3 {
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stage2Dropdown {
+  width: 326px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.priceMeal {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+
+  /* Button text S */
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.mealText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-right: 20px;
+}
+.monthlyText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Button */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-right: 10px;
+}
+.priceMonthly {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+  position: relative;
+  bottom: 7px;
+  /* Subtitle */
+  font-family: SF UI Text;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+.nextButton {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Red, #d83241);
+  color: white;
+}
+.planSummary {
+  color: var(--Dark, #333);
+
+  /* H4 */
+  font-family: SF UI Text;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  position: relative;
+  right: 2rem;
+}
+.monthlyPlanText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Body P */
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: -0.27px;
+}
+.editSize {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: relative;
+  left: 25px;
+}
+.deleteSize {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.lineSize {
+  position: relative;
+  right: 20px;
+}
+.summaryText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative !important;
+  right: 0vw;
+}
+.summaryMonthly {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+
+  /* Button text S */
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  right: 4rem;
+}
+.mealsPerWeek {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+  position: relative !important;
+  right: 0vw;
+  top: 5px;
+}
+.additionalText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+}
+.additionalPrice {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+
+  /* Button text S */
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  right: 4rem;
+}
+.deliveryFreeText {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+
+  /* Button text S */
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  right: 4rem;
+}
+.deliveryText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+}
+.monthlyTotal {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  /* right: 1vw; */
+  font-weight: bold;
+}
+.priceTotal {
+  color: var(--colors-neutral-black, #151522);
+  text-align: right;
+
+  /* Subtitle */
+  font-family: SF UI Text;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  right: 4rem;
+}
+.stage3Dropdown {
+  width: 326px;
+  height: 100px;
+  flex-shrink: 0;
+  position: relative;
+  right: 20px;
+}
+.stage4Dropdown {
+  width: 326px;
+  height: 100px;
+  flex-shrink: 0;
+  position: relative;
+  right: 20px;
+}
+.stage3Button {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Red, #d83241);
+  color: white;
+  position: relative;
+  right: 20px;
+}
+.stage3Back {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--Red, #d83241);
+  background: var(--White, #fff);
+  display: flex;
+  width: 326px;
+  height: 47px;
+  padding: 14px 10px;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--Red, #d83241);
+  text-align: center;
+  /* Button */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+.shippingAddressText {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Body P */
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: -0.27px;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+  right: 9.5%;
+}
+.inputFieldSize {
+  width: 326px;
+  height: 75px;
+  flex-shrink: 0;
+  position: relative;
+  top: 15px;
+  right: 25px;
+}
+.fullNameLabel {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  right: 1.5rem;
+}
+.addressLabel {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  right: 1.5rem;
+}
+.mapStage4 {
+  height: 0vh !important;
+  width: 90% !important;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right: 1.5rem;
+}
+.checkoutPayment {
+  position: relative;
+  top: 38rem;
+  left: 1rem;
+}
+.paymentOptionTexts {
+  position: relative;
+}
+.paymentOption1 {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  right: 10%;
+}
+.bankTransfer {
+  border-radius: 10px;
+  border: 1px solid var(--divider-light-1-px-60, rgba(228, 228, 228, 0.6));
+  background: var(--colors-neutral-white, #fff);
+  display: flex;
+  width: 326px;
+  height: 102px;
+  padding: 11px 19px 0px 33px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  right: 2rem;
+  top: 1rem;
+}
+.default-checkbox {
+  background-color: var(--Red, #d83241);
+  color: white;
+}
+
+.bankTransferHeading {
+  position: relative;
+  left: 1rem;
+  color: var(--Dark, #333);
+
+  /* Button */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+.bankDesc {
+  color: #0e0e0e;
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+}
+.paymentOption2 {
+  color: var(--colors-neutral-black, #151522);
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  right: 10%;
+  top: 2rem;
+}
+.deliveryOption {
+  border-radius: 10px;
+  border: 1px solid var(--divider-light-1-px-60, rgba(228, 228, 228, 0.6));
+  background: var(--colors-neutral-white, #fff);
+  display: flex;
+  width: 326px;
+  height: 102px;
+  padding: 11px 19px 0px 33px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  right: 2rem;
+  top: 3rem;
+}
+.checkoutButtons {
+  position: relative;
+  top: 10rem;
+}
+.checkoutButtonsStage4 {
+  position: relative;
+  top: 10rem;
+}
+.checkoutNote {
+  color: var(--Red, #d83241);
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+  position: relative;
+  top: 7rem;
+  width: 322px;
+  right: 1rem;
+}
+.deliveryDetail {
+  position: relative;
+  bottom: 2rem;
+}
+.Success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.congratulation {
+  color: var(--colors-neutral-black, #151522);
+  text-align: center;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.SuccessCheck {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+.orderText {
+  color: var(--colors-neutral-black, #151522);
+  text-align: center;
+
+  /* Paragraph L */
+  font-family: SF UI Text;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+.successDesc {
+  color: var(--colors-neutral-black, #151522);
+  text-align: center;
+
+  /* Placeholder */
+  font-family: SF Pro Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px; /* 128.571% */
+  width: 326px;
+}
+.stage2mainContainer {
+  margin-top: 5rem;
+  margin-left: 100px;
+}
+@media only screen and (max-width: 600px) {
+  .mealBox {
+    width: 90vw !important;
+    height: 14vh !important;
+    position: relative !important;
+    left: 1rem;
+    margin: 0.5rem;
+  }
+  .menuPlan {
+    width: 27vw;
+    height: 13vh;
+  }
+  .heading1 {
+    font-size: 20px;
+  }
+  .heading2 {
+    font-size: 14px;
+    bottom: 0.5rem;
+    position: relative;
+  }
+  .mealPlanButton {
+    /* width: 120px !important;
+    height: 32px !important;
+    bottom: 2rem;
+    position: relative !important; */
+    width: 25vw !important;
+    height: 3vh !important;
+    bottom: 2rem;
+    position: relative !important;
+  }
+  .mealBox1Stage2 {
+    margin-left: 0px !important;
+    height: 15vh !important;
+    width: 40vw !important;
+    right: 15vw !important;
+  }
+  .mealBox2Stage2 {
+    height: 15vh !important;
+    width: 40vw !important;
+    right: 8vw !important;
+  }
+  .mealBox1Stage2 {
+    border-radius: 10px;
+    border: 0.3px solid var(--Light-grey, #d9d9d9);
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(50, 50, 71, 0.06),
+      0px 2px 2px 0px rgba(50, 50, 71, 0.06);
+    width: 275px;
+    height: 195.245px;
+    flex-shrink: 0;
+  }
+  .stage2mainContainer {
+    margin-top: 2rem !important;
+    margin-left: 100px;
+  }
+  .planText1 {
+    font-size: 24px !important;
+    left: 1.5rem !important;
+    bottom: 2rem;
+  }
+  .planText2 {
+    font-size: 24px !important;
+    left: 0.5rem !important;
+    top: 0.5rem !important;
+  }
+  .saveText {
+    width: 20vw;
+  }
+  .bestOption {
+    left: 10vw !important;
+    bottom: 2rem;
+    font-size: 12px;
+  }
+  .planText2Desc {
+    position: relative;
+    left: 1rem;
+    top: 1rem;
+    font-size: 12px;
+    width: 35vw;
+    text-align: center;
+  }
+  .formSizeStage4{
+    margin-top: 1rem;
+    position: relative;
+    left: 1.5rem;
+  }
+  .formSizeStage3{
+    position: relative;
+    right: 1.5rem;
+  }
+  .shippingAddressText{
+    right: 1.5rem;
+  }
+  
+  .planSummary{
+    right: 7rem;
+  }
+  .stage3Back,.stage3Button{
+    right: 2vw !important;
+  }
+  .stage3Dropdown{
+    right: 2vw !important;
+  }
+  .mainContainerStage3{
+    left: 11vw;
+  }
+  .stage4MainContainer{
+    position: relative;
+    left: 1rem;
+  }
+  .checkoutButtonsStage4{
+    right: 1.25rem;
+  }
+  .checkoutPayment {
+    position: relative;
+    top: 60rem;
+    left: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mealBox1Stage2 {
+    border-radius: 10px;
+    border: 0.3px solid var(--Light-grey, #d9d9d9);
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(50, 50, 71, 0.06),
+      0px 2px 2px 0px rgba(50, 50, 71, 0.06);
+    width: 275px;
+    height: 195.245px;
+    flex-shrink: 0;
+    margin-left: 17vw;
+  }
+  
+}

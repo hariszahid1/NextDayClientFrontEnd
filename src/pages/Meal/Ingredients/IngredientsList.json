@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "Ingredient": "jack",
+    "Weight": "33",
+    "Calories": "353"
+  },
+  {
+    "id": 2,
+    "Ingredient": "jack",
+    "Weight": "22",
+    "Calories": "232"
+  },
+  {
+    "id": 3,
+    "Ingredient": "jack",
+    "Weight": "11",
+    "Calories": "141"
+  }
+]

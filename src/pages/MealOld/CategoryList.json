@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "categoryName": "jack",
+      "password": "jacjkjk"
+      
+    },
+    {
+      "id": 2,
+      "categoryName": "smith",
+      "categoryDesc": "jacjklk",
+      "defaultSizeCheckbox": true
+  
+    },
+    {
+      "id": 3,
+      "categoryName": "brooks",
+      "categoryDesc": "jack",
+      "defaultSizeCheckbox": true
+    },
+    {
+      "id": 4,
+      "categoryName": "stokes",
+      "categoryDesc": "jacjklk",
+      "defaultSizeCheckbox": true
+  
+    },
+    {
+      "id": 5,
+      "categoryName": "root",
+      "categoryDesc": "jack",
+      "defaultSizeCheckbox": true
+    }
+  ]
+  

@@ -1,0 +1,22 @@
+.explore-section {
+    background-image: url("../../assets//cookingRound.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.viewRound {
+    background: rgb(44 82 70 / 16%);
+    border: 1px solid #ff8f0473;
+    border-radius: 2px;
+}
+
+.roundText {
+    text-shadow: -1px 0 black,
+        0 1px black,
+        1px 0 black,
+        0 -1px black;
+    background: cornsilk;
+
+
+}

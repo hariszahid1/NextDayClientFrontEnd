@@ -1,0 +1,96 @@
+/* Custom CSS classes for text and color */
+.text-dark {
+  color: var(--Dark, #333);
+}
+
+.text-sf-ui-text {
+  font-family: "SF UI Text", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+}
+
+.w-326 {
+  width: 326px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.ml-100px {
+  margin-left: 150px;
+}
+.mt-100px {
+  margin-top: 100px;
+}
+body {
+  overflow-x: hidden;
+}
+.signUpButton {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Red, #d83241);
+  color: white;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .registerWeb{
+    display: none !important;
+  }
+}
+.getStarted{
+  margin-top: 2vh;
+  margin-left: 2vh;
+}
+.addressText{
+  margin-left: 2vh;
+}
+.addressInput{
+  width: 80vw;
+  margin-left: 2vh;
+}
+@media only screen and (max-width: 600px) {
+  .signUpButtonMobile {
+    display: flex;
+    width: 80vw;
+    height: 47px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: var(--Red, #d83241);
+    color: white;
+    margin-top: 30px;
+    margin-left: 2vh;
+  }
+  .googleMapsMobile{
+    position: relative;
+    bottom: 16vh;
+    height: 47vh;
+  }
+  .mainContainer{
+    overflow-x: hidden;
+  }
+  body{
+    overflow-x: hidden;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .registerMobile {
+    display: none !important;    
+  }
+}
+
+
+

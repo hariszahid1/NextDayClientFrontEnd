@@ -1,0 +1,45 @@
+.menuClick:active{
+    color: red;
+}
+.handleRegister{
+    display: flex;
+    position: relative;
+    left: 16rem;
+    gap: 3rem;
+}
+@media only screen and (max-width: 600px) {
+    .navLogo {
+     display: none;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .mobileNavLogo {
+        width: 164px;
+        height: 21.564px;
+        margin-right: 2rem;
+            }
+  }
+  @media only screen and (max-width: 600px) {
+    .handleRegister{
+        display: flex;
+        position: relative;
+        left:0.5rem;
+        gap: 1rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .menuClick{
+        font-size: 16px;
+    }
+  }
+  .menuDivider{
+    border: none;
+    height: 1px;
+    background-color: rgba(228, 228, 228, 0.20);
+    margin: 20px 0;  }
+  .signUpMobile{
+    padding-top: 25rem;
+  }
+  .loginButtonMobile{
+    color: var(--Red, #D83241);
+  }

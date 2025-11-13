@@ -1,0 +1,621 @@
+.healthMealBox {
+  width: 470px;
+  height: 400px;
+  flex-shrink: 0;
+  background: #fff;
+  position: absolute;
+  top: 12rem;
+}
+.healthMealBox span {
+  color: var(--colors-neutral-black, #151522);
+  font-family: SF UI Text;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  top: 5rem;
+  left: 2rem;
+}
+.healthMealBox span span {
+  color: var(--Red, #d83241);
+  font-family: SF UI Text;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  top: 0px;
+  left: auto;
+}
+.healthMealBoxButton {
+  display: flex;
+  width: 326px;
+  height: 47px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--Red, #d83241);
+  color: white;
+  position: relative;
+  top: 6rem;
+  left: 2rem;
+}
+.worksSection {
+  width: 100%;
+}
+.workText {
+  color: var(--Dark, #333);
+  text-align: center;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.workSection2 {
+  position: relative;
+  top: -8rem;
+}
+.selectMeal {
+  color: var(--Dark, #333);
+
+  /* H5 */
+  font-family: SF UI Text;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  position: relative;
+  top: 2rem;
+  display: flex;
+}
+.healthySection {
+  color: var(--Dark, #333);
+  text-align: center;
+
+  /* Paragraph L */
+  font-family: SF UI Text;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  position: relative;
+  right: 40px;
+}
+.menuFlex {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.menuText {
+  color: #fff;
+  text-align: center;
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.21px;
+}
+.foodFacts {
+  width: 100%;
+  height: 650px;
+  flex-shrink: 0;
+  background: var(--Grey-blue, #edf2fb);
+}
+.foodFacts h4 {
+  color: var(--Dark, #333);
+  text-align: center;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  padding-top: 20px;
+}
+.fourHundred {
+  color: #000;
+  font-family: Impact;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.fourDesc {
+  color: var(--Dark, #333);
+  font-family: SF UI Text;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.3px;
+  width: 375px;
+}
+.whatCookingHeading {
+  color: var(--Dark, #333);
+  text-align: center;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+}
+.whatCookingTag {
+  color: var(--Dark, #333);
+  text-align: center;
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  margin-top: 10px;
+  position: relative;
+  bottom: 8rem;
+}
+.cardDesign {
+  border-radius: 20px;
+  border: 1px solid #ececec;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+  width: 250px;
+  height: 350px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 10rem;
+  white-space: normal;
+}
+.cardDesignHeading {
+  color: #717171;
+  text-align: center;
+
+  /* Paragraph M */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  position: relative;
+  right: 3rem;
+  top: 1rem;
+}
+.cardDesignDesc {
+  color: #717171;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  position: relative;
+  top: 2rem;
+  width: 180px;
+  height: 51px;
+  flex-shrink: 0;
+  right: 10px;
+}
+
+.faqHeading {
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+
+  /* H3 */
+  font-family: SF UI Text;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.54px;
+  display: flex;
+  justify-content: center;
+}
+.faqQuestion {
+  color: #000;
+
+  /* Subtitle */
+  font-family: SF UI Text;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.36px;
+  font-family: Montserrat;
+  position: relative;
+  left: 18rem;
+}
+.faqAnswer {
+  color: rgba(0, 0, 0, 0.8);
+
+  /* Body P */
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: -0.27px;
+  display: flex;
+  width: 622px;
+  height: 154px;
+  flex-shrink: 0;
+  position: relative;
+  left: 18rem;
+}
+.homeFooter {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--Grey, #4a4a4a);
+  text-align: center;
+
+  /* Button */
+  font-family: SF UI Text;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.24px;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.copyRight {
+  display: flex;
+  justify-content: center;
+  color: var(--Grey, #4a4a4a);
+  text-align: center;
+
+  /* Paragraph S */
+  font-family: SF UI Text;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.21px;
+  margin-top: 1rem;
+}
+.homeSectionCook {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .homeSectionCook {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .homeSectionMobile {
+    width: 100%;
+    height: 297px;
+    flex-shrink: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .healthMealBox {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    background: #fff;
+    position: relative;
+    top: 0rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .healthMealBox span {
+    color: var(--colors-neutral-black, #151522);
+    font-family: SF UI Text;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .healthMealBox span span {
+    font-size: 49px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .workSection {
+    position: relative;
+    top: -4rem;
+    color: var(--Dark, #333);
+    text-align: center;
+
+    /* H3 */
+    font-family: SF UI Text;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.54px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .workSection2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -28rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selectMeal {
+    color: var(--Dark, #333);
+    text-align: center;
+
+    /* H5 */
+    font-family: SF UI Text;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.36px;
+    right: 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .healthySection {
+    width: 260px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .healthySectionDeliver {
+    right: 10px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatEat {
+    right: 0px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .workTextMain {
+    top: 15rem;
+    position: relative;
+  }
+}
+.menuFlex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sm\:grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.lg\:grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.menuText {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.grid > div {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 600px) {
+  .theMenuDesc {
+    color: var(--Dark, #333);
+    text-align: center;
+
+    /* Paragraph M */
+    font-family: SF UI Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    width: 328px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .theMenuDesc {
+    color: var(--Dark, #333);
+    text-align: center;
+
+    /* Paragraph M */
+    font-family: SF UI Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    width: 328px;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menuFlex {
+    margin-top: 15rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .foodFacts {
+    width: 100%;
+    height: 1385px;
+    flex-shrink: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .fourDesc {
+    color: var(--Dark, #333);
+    font-family: SF UI Text;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.3px;
+    width: 326px;
+    padding-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fourHundred {
+    padding-top: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .whatCookingHeading {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+
+    /* H3 */
+    font-family: SF UI Text;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.54px;
+    width: 280px;
+    margin-left: 4rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .whatCookingTag {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+
+    /* Paragraph M */
+    font-family: SF UI Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    width: 326px;
+    padding: 2rem 0rem 0rem 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cardDesignDesc {
+    white-space: normal;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .faqQuestion,
+  .faqAnswer {
+    left: 2rem !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .faqAnswer {
+    width: 326px;
+    height: 180px !important;
+    margin-top: 3rem;
+    flex-shrink: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .SignUpSection {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footerMobileBanner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 20rem;
+    left: 45vw;
+  }
+  .footerBannerMain {
+    color: #fff;
+    font-family: SF UI Text;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.42px;
+    width: 183px;
+  }
+  .footerBannerDesc {
+    color: #fff;
+
+    /* Paragraph M */
+    font-family: SF UI Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    width: 183px;
+    margin-top: 2rem;
+  }
+  .footerBannerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: var(--Red, #d83241);
+    color: white;
+    width: 183px;
+    height: 47px;
+    margin-top: 1rem;
+  }
+  .homeFooter{
+    display: flex;
+    flex-direction: column;
+    bottom: 15rem;
+    position: relative;
+    gap: 2rem !important;
+  }
+  .socialIcons{
+    position: relative;
+  bottom: 3rem;
+  }
+  .copyRight{
+    position: relative;
+    bottom: 2rem;
+  }
+}

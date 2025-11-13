@@ -1,0 +1,9 @@
+.deleteButton{
+    background-color: red!important;
+}
+.mainList{
+    overflow-y: scroll;
+    height: 200px;
+    overflow-x: hidden;
+
+}

@@ -1,0 +1,7 @@
+.explore-section {
+    background-image: url("../../assets//cookingRound.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 95vh;
+}

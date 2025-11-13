@@ -1,0 +1,41 @@
+.backgroundColor {
+  background-color: rgb(201, 199, 199);
+  margin-top: 100px;
+  height: 800px;
+}
+
+.column {
+  margin-left: 50px;
+  padding-top: 60px;
+}
+
+.datePicker {
+  height: 60px;
+  width: 100%;
+}
+.datePicker input {
+  width: 320px;
+  height: 35px;
+  padding-bottom: 10px;
+}
+.column-2 {
+  padding-top: 100px;
+}
+.column-3 {
+  padding-top: 100px;
+  margin-left: 50px;
+}
+.meals {
+  padding-bottom: 50px;
+}
+.column-4 {
+  padding-top: 100px;
+  margin-left: 30px;
+}
+.column-5 {
+  padding-top: 150px;
+  margin-left: 30px;
+}
+.submitButton {
+  padding-top: 100px;
+}

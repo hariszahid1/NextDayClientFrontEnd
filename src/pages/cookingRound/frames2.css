@@ -1,0 +1,51 @@
+
+.CookingRound {
+  background-image: url('../../../public/vegetables-bkg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 95vh;
+}
+
+.startDate {
+  padding-top: 150px;
+  margin-left: 250px !important;
+}
+.endDate {
+  padding-top: 100px;
+ margin-left: 250px !important;
+
+}
+
+.submit {
+  padding-left: 700px;
+  transform: translateY(-120px);
+}
+/* .Rounds { */
+  /* margin-top: 100px;
+  height: 100%;
+} */
+
+.vl {
+  border-left: 2px solid black;
+  height: 300px;
+  margin-left: 80px;
+}
+.v2 {
+  border-left: 2px solid black;
+  width: 300px;
+}
+
+/* .category {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(80, 80, 189);
+  color: white;
+} */
+
+.dateStyle{
+  color: white;
+  font-weight: 300;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
