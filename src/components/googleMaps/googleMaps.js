@@ -327,7 +327,7 @@ const GoogleMaps = ({ onConfirm, apiKey }) => {
         </div>
       )}
 
-      Debug info
+      {/* Debug info
       {process.env.NODE_ENV === 'development' && (
         <div style={{ 
           marginTop: '10px', 
@@ -341,7 +341,7 @@ const GoogleMaps = ({ onConfirm, apiKey }) => {
           Geocoder: {geocoder ? 'Ready' : 'Waiting'} | 
           Location: {markerPos.lat.toFixed(4)}, {markerPos.lng.toFixed(4)}
         </div>
-      )}
+      )} */}
      </div>
   );
 };
