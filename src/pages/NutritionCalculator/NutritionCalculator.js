@@ -125,25 +125,10 @@ const NutritionCalculator = () => {
                 carbsPercentage = 0.50;
                 fatPercentage = 0.30;
                 break;
-            case 'low-fat':
-                proteinPercentage = 0.25;
-                carbsPercentage = 0.60;
-                fatPercentage = 0.15;
-                break;
-            case 'low-carb':
-                proteinPercentage = 0.30;
-                carbsPercentage = 0.20;
-                fatPercentage = 0.50;
-                break;
             case 'high-protein':
                 proteinPercentage = 0.35;
                 carbsPercentage = 0.40;
                 fatPercentage = 0.25;
-                break;
-            case 'custom':
-                proteinPercentage = 0.20;
-                carbsPercentage = 0.50;
-                fatPercentage = 0.30;
                 break;
             default:
                 proteinPercentage = 0.20;
@@ -156,10 +141,6 @@ const NutritionCalculator = () => {
         const carbsGrams = Math.round((calorieTarget * carbsPercentage) / 4);
         const fatGrams = Math.round((calorieTarget * fatPercentage) / 9);
 
-        // Calculate sugar (typically 10-20% of carbs)
-        const sugarPercentage = 0.15;
-        const sugarGrams = Math.round(carbsGrams * sugarPercentage);
-
         // Calculate ranges
         const proteinMin = Math.round(proteinGrams * 0.5);
         const proteinMax = Math.round(proteinGrams * 1.4);
@@ -170,21 +151,16 @@ const NutritionCalculator = () => {
         const fatMin = Math.round(fatGrams * 0.6);
         const fatMax = Math.round(fatGrams * 1.4);
 
-        const sugarMin = Math.round(sugarGrams * 0.8);
-        const sugarMax = Math.round(sugarGrams * 1.4);
-
-        // Calculate sugar and saturated fat limits
-        const sugarLimit = Math.round(calorieTarget * 0.1 / 4);
-        const saturatedFatLimit = Math.round(calorieTarget * 0.1 / 9);
+        // (Sugar and saturated fat calculations removed)
 
         // Update results
         setResults({
             protein: { value: proteinGrams, range: proteinMin + ' - ' + proteinMax },
             carbs: { value: carbsGrams, range: carbsMin + ' - ' + carbsMax },
-            sugar: { value: sugarGrams, range: sugarMin + ' - ' + sugarMax },
+            sugar: { value: 0, range: '' },
             fat: { value: fatGrams, range: fatMin + ' - ' + fatMax },
-            sugarLimit: sugarLimit,
-            saturatedFatLimit: saturatedFatLimit,
+            sugarLimit: 0,
+            saturatedFatLimit: 0,
             calories: Math.round(calorieTarget),
             kj: Math.round(calorieTarget * 4.184)
         });
@@ -247,10 +223,8 @@ const NutritionCalculator = () => {
             
             React.createElement('div', { className: 'calculator' },
                 React.createElement('div', { className: 'input-section' },
-                    React.createElement('div', { className: 'unit-toggle' },
-                        React.createElement('div', { className: 'unit-option' }, 'US Units'),
-                        React.createElement('div', { className: 'unit-option active' }, 'Metric Units'),
-                        React.createElement('div', { className: 'unit-option' }, 'Other Units')
+                    React.createElement('div', { className: 'unit-toggle single' },
+                        React.createElement('div', { className: 'unit-option active' }, 'Metric Units')
                     ),
                     
                     React.createElement('div', { className: 'form-group' },
@@ -445,7 +419,7 @@ const NutritionCalculator = () => {
                         )
                     ),
                     
-                    React.createElement('a', { href: '#', className: 'settings-link' }, '+ Settings'),
+                    null,
                     
                     React.createElement('div', { className: 'button-group' },
                         React.createElement('button', { 
@@ -472,7 +446,7 @@ const NutritionCalculator = () => {
                 
                 React.createElement('div', { className: 'result-section' },
                     React.createElement('div', { className: 'diet-types' },
-                        ['balanced', 'low-fat', 'low-carb', 'high-protein', 'custom'].map(function(type) {
+                        ['balanced', 'high-protein'].map(function(type) {
                             return React.createElement('div', {
                                 key: type,
                                 className: 'diet-type ' + (dietType === type ? 'active' : ''),
@@ -497,11 +471,7 @@ const NutritionCalculator = () => {
                             ),
                             React.createElement('div', { className: 'result-range' }, 'Range: ' + results.carbs.range),
                             
-                            React.createElement('div', { className: 'result-item', style: { marginTop: '10px' } },
-                                React.createElement('span', { className: 'result-label' }, 'Includes Sugar'),
-                                React.createElement('span', { className: 'result-value' }, results.sugar.value + ' grams/day')
-                            ),
-                            React.createElement('div', { className: 'result-range' }, 'Range: ' + results.sugar.range)
+                            
                         ),
                         
                         React.createElement('div', { className: 'result-box' },
@@ -515,19 +485,7 @@ const NutritionCalculator = () => {
                             )
                         ),
                         
-                        React.createElement('div', { className: 'result-box' },
-                            React.createElement('div', { className: 'result-title' }, 'Sugar'),
-                            React.createElement('div', { className: 'result-item' },
-                                React.createElement('span', { className: 'result-label' }, '<' + results.sugarLimit + ' grams/day')
-                            )
-                        ),
                         
-                        React.createElement('div', { className: 'result-box' },
-                            React.createElement('div', { className: 'result-title' }, 'Saturated Fat'),
-                            React.createElement('div', { className: 'result-item' },
-                                React.createElement('span', { className: 'result-label' }, '<' + results.saturatedFatLimit + ' grams/day')
-                            )
-                        ),
                         
                         React.createElement('div', { className: 'result-box' },
                             React.createElement('div', { className: 'result-title' }, 'Food Energy'),

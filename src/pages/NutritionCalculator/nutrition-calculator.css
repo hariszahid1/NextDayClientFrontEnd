@@ -213,13 +213,7 @@
     display: none;
 }
 
-.nutrition-calculator .settings-link {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 14px;
-    margin-top: 10px;
-    display: inline-block;
-}
+/* settings link removed */
 
 .nutrition-calculator .exercise-note {
     font-size: 12px;
