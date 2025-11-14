@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -31,6 +32,8 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation();
+  const hideMainLinks = location.pathname === '/signin';
 
   return (
     <header className="bg-black">
@@ -57,7 +60,7 @@ export default function Navbar() {
             <img className="h-6 w-auto" src={NextDay} alt="Next Day" />
           </a>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12" style={{ display: hideMainLinks ? 'none' : undefined }}>
           <Link  to="/" className="text-sm font-semibold leading-6 text-white menuClick" >
             Home
           </Link>
@@ -72,20 +75,20 @@ export default function Navbar() {
           </Link>
           <div className='handleRegister'>
           <Link to="/signin" className="text-sm font-semibold leading-6 text-white menuClick">
-            Log In
+            Register
           </Link>
           
-          <Link to="/signup" className="text-sm font-semibold leading-6 text-white menuClick">Register</Link>
+          {/* Removed separate /signup link per request - keep single Register link that points to /signin (UI will act as registration) */}
+          {/* <Link to="/signup" className="text-sm font-semibold leading-6 text-white menuClick">Register</Link> */}
           </div>
 
         </Popover.Group>
-        <Popover.Group className="sm:flex lg:hidden">
+        <Popover.Group className="sm:flex lg:hidden" style={{ display: hideMainLinks ? 'none' : undefined }}>
           <div className='handleRegister'>
           <Link to="/signin" className="text-sm font-semibold leading-6 text-white menuClick" style={{color: '#D83241'}}>
-            Log In
+            Register
           </Link>
-          
-          <Link to="/signup" className="text-sm font-semibold leading-6 text-white menuClick">Register</Link>
+          {/* <Link to="/signup" className="text-sm font-semibold leading-6 text-white menuClick">Register</Link> */}
           </div>
 
         </Popover.Group>
@@ -118,7 +121,7 @@ export default function Navbar() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-6" style={{ display: hideMainLinks ? 'none' : undefined }}>
                 {/* <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
