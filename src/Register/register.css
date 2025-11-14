@@ -7,7 +7,15 @@
 .leftCol{display:flex;align-items:center;justify-content:center;padding:4rem}
 .rightCol{background:var(--Background-grey,#f4f5fa);position:relative}
 
-.cardWrap{max-width:600px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88));backdrop-filter:blur(6px);box-shadow:0 22px 80px rgba(15,23,42,0.12);border-radius:22px;padding:3rem;transform:translateY(-2.5rem);transition:transform .18s ease}
+.cardWrap{max-width:760px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88));backdrop-filter:blur(6px);box-shadow:0 22px 80px rgba(15,23,42,0.12);border-radius:22px;padding:3rem;transform:translateY(-2.5rem);transition:transform .18s ease}
+
+/* When calculator-center is applied (step 4), make the content centered and roomier */
+.cardWrap.calculator-center{max-width:1200px;padding:2.5rem 4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateY(0)}
+.cardWrap.calculator-center .cardHeader{align-items:center;text-align:center}
+.cardWrap.calculator-center .cardTitle{font-size:24px}
+.cardWrap.calculator-center .stepPane{width:100%;max-width:900px}
+.cardWrap.calculator-center .stepsIndicator{display:none}
+.cardWrap.calculator-center .stepPane .primaryButton{width:160px}
 .cardHeader{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:14px}
 .logoImg{width:150px;height:auto;margin-bottom:8px}
 .cardTitle{font-size:22px;margin:0;color:#111827;font-weight:800}
@@ -51,6 +59,12 @@
 	.mapWrapper{display:none}
 	.cardWrap{padding:2rem;border-radius:16px;transform:none}
 }
+
+/* When the registerGrid has .fullLeft (step 4), hide the right column and make left column full width */
+.registerGrid.fullLeft{grid-template-columns:1fr}
+.registerGrid.fullLeft .rightCol{display:none}
+.registerGrid.fullLeft .leftCol{padding:2.5rem 2rem}
+.registerGrid.fullLeft .cardWrap{max-width:1300px;margin:0 auto;width:95%}
 
 @media only screen and (max-width: 480px){
 	.cardWrap{padding:1.25rem}

@@ -5,6 +5,7 @@ import SignInImg from '../images/SignIn.png';
 import SignInImg1 from '../images/SignIn1.png';
 import NextDay from '../images/Logo Nextday.png';
 import GoogleMaps from '../components/googleMaps/googleMaps';
+import NutritionCalculator from '../pages/NutritionCalculator/NutritionCalculator';
 
 const stepVariants = {
   enter: { opacity: 0, y: 12 },
@@ -21,13 +22,13 @@ export default function Register() {
   const onConfirmLocation = (address) => setSelectedAddress(address || '');
 
   return (
-    <div className="registerGrid">
+    <div className={"registerGrid" + (step === 4 ? ' fullLeft' : '')}>
       <div className="leftCol">
-        <div className="cardWrap">
+        <div className={"cardWrap" + (step === 4 ? ' calculator-center' : '')}>
           <div className="cardHeader">
             <img src={NextDay} alt="NextDay" className="logoImg" />
             <h1 className="cardTitle">NextDay Food Kitchen</h1>
-            <p className="cardSubtitle">{step === 3 ? 'We need your delivery location to see if we can deliver fresh meals to you.' : 'Welcome! Sign up to continue enjoying your favorite meals.'}</p>
+            <p className="cardSubtitle">{step === 3 ? 'We need your delivery location to see if we can deliver fresh meals to you.' : step === 4 ? 'Start your journey to better health with precise nutrition planning.' : 'Welcome! Sign up to continue enjoying your favorite meals.'}</p>
           </div>
 
           <div className="stepsIndicator">
@@ -99,13 +100,18 @@ export default function Register() {
                 <input className="input" placeholder="Address will appear here after confirm" value={selectedAddress} readOnly />
                 <button
                   className={`primaryButton ${selectedAddress? '' : 'disabled'}`}
-                  onClick={() => selectedAddress ? alert('Continue to app (UI-only)') : null}
+                  onClick={() => selectedAddress ? setStep(4) : null}
                 >
                   Continue
                 </button>
               </motion.div>
             )}
           </AnimatePresence>
+          {step === 4 && (
+            <div style={{ width: '100%', marginTop: '18px' }}>
+              <NutritionCalculator />
+            </div>
+          )}
         </div>
       </div>
 
@@ -129,6 +135,8 @@ export default function Register() {
             <GoogleMaps onConfirm={(address)=>{ onConfirmLocation(address); }} />
           </div>
         )}
+
+        
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SelectPlan from './PlanSelect/SelectPlan';
 import Homepage from './Home/HomePage';
+import NutritionCalculator from './pages/NutritionCalculator/NutritionCalculator';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<Register />} />
           <Route path="/selectPlan" element={<SelectPlan />} />
+          <Route path="/nutrition-calculator" element={<NutritionCalculator />} />
           <Route path="/" element={<Homepage />} />
           {/* <Route path="/selectPlan/stage1" element={<Stage1 />} />
           <Route path="/selectPlan/stage2" element={<Stage2 />} /> */}
