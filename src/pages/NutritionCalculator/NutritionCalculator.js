@@ -1,7 +1,7 @@
 // NutritionCalculator.js
 import React, { useState, useEffect, useRef } from 'react';
 import './nutrition-calculator.css';
-
+import { BASEURL } from '../../utils/config';
 const NutritionCalculator = () => {
     const [formData, setFormData] = useState({
         age: 30,
@@ -65,10 +65,11 @@ const NutritionCalculator = () => {
 
         try {
             // Call backend API
-            const response = await fetch('/api/nutrition/calculate-nutrition', {
+            const response = await fetch(`${BASEURL}/nutrition/calculate-nutrition`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+
                 },
                 body: JSON.stringify({
                     ...formData,
@@ -228,7 +229,7 @@ const NutritionCalculator = () => {
                 nutrition
             };
 
-            const resp = await fetch('/api/nutrition/profiles', {
+            const resp = await fetch(`${BASEURL}/nutrition/profiles`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
