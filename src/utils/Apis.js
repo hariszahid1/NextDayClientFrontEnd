@@ -1,4 +1,5 @@
-export const BASEURL="http://localhost:8001/api"
+import { API_BASE } from './config';
+export const BASEURL = API_BASE || 'http://localhost:8001/api';
 
 // lookups Meal Category
 export const getAllMealCategory=`${BASEURL}/meals/lookups/mealCategory/getAll`

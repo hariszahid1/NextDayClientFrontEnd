@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { preRoundContext } from "../../Contexts/PreRound";
 import { toastmessage } from "../../components/ToastMessage/toast";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 function RoundTypeModal({
   carbs,
   closeModal,
@@ -42,7 +43,7 @@ function RoundTypeModal({
   useEffect(() => {
     const GetAllCategory = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/getMeals/category/${menuButton}`)
+        .get(`${BASEURL}/meals/getMeals/category/${menuButton}`)
         .then((res) => {
           const categoryList = res.data.map((data) => {
             return { ...data, id: data._id };

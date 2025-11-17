@@ -5,6 +5,7 @@ import Col from "react-bootstrap/esm/Col";
 import "./Card.css";
 import { useNavigate} from "react-router-dom"
 import axios from 'axios'
+import { BASEURL } from '../../utils/Apis';
 import { toastmessage } from "../../components/ToastMessage/toast";
 
 
@@ -19,7 +20,7 @@ const Card = ({ meal, i,UpdateList }) => {
   // const indreginetsDesc = restaurant?.ingredients?.weight;
 
   const deleteMeal = async (id) => {
-    await axios.delete(`http://localhost:8001/api/meals/deletemeal/${id}`).then((res) => {
+    await axios.delete(`${BASEURL}/meals/deletemeal/${id}`).then((res) => {
         console.log(res.data);
     })
     toastmessage("Meal has been Deleted", "success");

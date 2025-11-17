@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
+import { BASEURL } from '../../../../utils/Apis';
 import Select from "react-select";
 import { useNavigate } from "react-router-dom";
 import { toastmessage } from "../../../../components/ToastMessage/toast";
@@ -65,7 +66,7 @@ function MealForm(props) {
       };
       const header = { "Content-Type": "application/json" };
       await axios
-        .post(`http://localhost:8001/api/meals/addMeal`, addMeal, header)
+        .post(`${BASEURL}/meals/addMeal`, addMeal, header)
         .then((res) => {
           toastmessage("New Meal is Created!", "success");
 
@@ -92,7 +93,7 @@ function MealForm(props) {
       const header = { "Content-Type": "application/json" };
       await axios
         .patch(
-          `http://localhost:8001/api/meals/editMeal/${id}`,
+          `${BASEURL}/meals/editMeal/${id}`,
           addMeal,
           header
         )

@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Table from "react-bootstrap/esm/Table";
 import Checkbox from "../Checkbox/Checkbox";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 function SubTypeModal({
   carbs,
   closeModal,
@@ -61,7 +62,7 @@ function SubTypeModal({
   useEffect(() => {
     const GetAllCategory = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/lookups/mealCategory/getAll`)
+        .get(`${BASEURL}/meals/lookups/mealCategory/getAll`)
         .then((res) => {
           const categoryList = res.data.map((data) => {
             return { ...data, id: data._id, name: data.categoryName };

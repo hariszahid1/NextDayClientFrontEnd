@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 import { useNavigate } from "react-router-dom";
 import "./Meal.css";
 import ReUseAbleTable from "../../components/Table/Table";
@@ -45,7 +46,7 @@ function Meal() {
   const HandleClosePopup = async (value) => {
     if (value === "delete") {
       await axios
-        .delete(`http://localhost:8001/api/meals/deleteMeal/${id}`)
+        .delete(`${BASEURL}/meals/deleteMeal/${id}`)
         .then((res) => {
           toastmessage(res.data, "success");
           setPopup(false);
@@ -59,7 +60,7 @@ function Meal() {
   const HandleDeletePopup = () => { };
   const GetAllMeals = async () => {
     await axios
-      .get(`http://localhost:8001/api/meals/getMeal/All`)
+      .get(`${BASEURL}/meals/getMeal/All`)
       .then((res) => {
         setList(res.data);
       });

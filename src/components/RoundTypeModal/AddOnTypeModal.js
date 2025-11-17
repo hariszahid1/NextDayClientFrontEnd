@@ -11,6 +11,7 @@ import { preRoundContext } from "../../Contexts/PreRound";
 import { toastmessage } from "../../components/ToastMessage/toast";
 
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 function AddOnTypeModal({
   carbs1,
   closeModal,
@@ -41,7 +42,7 @@ function AddOnTypeModal({
   useEffect(() => {
     const GetAllCategory = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/getMeals/addons`)
+        .get(`${BASEURL}/meals/getMeals/addons`)
         .then((res) => {
           const addOnList = res.data.map((data) => {
             return { ...data, id: data._id };
