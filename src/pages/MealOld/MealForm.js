@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Select from "react-select";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BASEURL } from '../../utils/Apis';
 
 // import UserList from "../../components/UserList/UserList";
 // import ListUser from "./UserList.json";
@@ -33,7 +34,7 @@ function MealForm() {
     console.log(addMeal);
 
     await axios
-      .post(`http://localhost:8001/api/meals/addMeal`, addMeal, header)
+      .post(`${BASEURL}/meals/addMeal`, addMeal, header)
       .then((res) => {
         toastmessage("New Meal is Created!", "success");
         navigate("/meal");

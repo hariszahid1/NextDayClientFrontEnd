@@ -9,6 +9,7 @@ import { toastmessage } from "../../../components/ToastMessage/toast";
 import "./Ingredients.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { BASEURL } from '../../../utils/Apis';
 
 function Ingredients() {
   const [list, setList] = useState(ListIngredient);
@@ -41,7 +42,7 @@ function Ingredients() {
     const header = { "Content-Type": "application/json" };
     await axios
       .put(
-        `http://localhost:8001/api/meals/ingredients/addingredient/${params.id}`,
+        `${BASEURL}/meals/ingredients/addingredient/${params.id}`,
         ingredients,
         header
       )
@@ -67,7 +68,7 @@ function Ingredients() {
 
   const GetIngredientsList = () => {
     console.log("testing this code")
-    return axios.get(`http://localhost:8001/api/meals/ingredients/${params.id}`).then((res)=>{
+    return axios.get(`${BASEURL}/meals/ingredients/${params.id}`).then((res)=>{
       console.log(res.data)
       setList(res.data)
     })

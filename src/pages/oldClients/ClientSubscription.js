@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 import "./CManage.css";
 import Table from "./components/Table";
 
@@ -17,7 +18,7 @@ const ClientSubscription = () => {
     console.log("client subs downloaded:  " + params.id);
     
     return axios
-      .get(`http://localhost:8001/api/subscriptions/getclientsubscriptions/${params.id}`)
+      .get(`${BASEURL}/subscriptions/getclientsubscriptions/${params.id}`)
       .then((res) => {
         setList(res.data);
         console.log(res.data);

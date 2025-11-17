@@ -11,7 +11,7 @@ const DetailMeal = () => {
   const getDetailMeal = () => {
     console.log("testing this code");
     return axios
-      .get(`http://localhost:8001/api/meals/getMeal/${params.id}`)
+      .get(`${BASEURL}/meals/getMeal/${params.id}`)
       .then((res) => {
         console.log(res.data);
         setDetail(res.data);

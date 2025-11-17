@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { toastmessage } from "../../../components/ToastMessage/toast";
 import moment from "moment";
 import axios from "axios";
+import { BASEURL } from '../../../utils/Apis';
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import Checkbox from "../../../components/Checkbox/Checkbox";
 
@@ -33,7 +34,7 @@ const AddSubscription = () => {
   
   const GetAllClients = async () => {
     await axios
-      .get(`http://localhost:8001/api/clients/getallclients`)
+      .get(`${BASEURL}/clients/getallclients`)
       .then((res) => {
         setClientList(res.data);
         console.log("clients", res.data);
@@ -149,7 +150,7 @@ const AddSubscription = () => {
   useEffect(() => {
     const GetAllCategory = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/lookups/mealCategory/getAll`)
+        .get(`${BASEURL}/meals/lookups/mealCategory/getAll`)
         .then((res) => {
           const categoryList = res.data.map((data) => {
             return { ...data, id: data._id, name: data.categoryName };
@@ -1322,7 +1323,7 @@ const AddSubscription = () => {
     const header = { "Content-Type": "application/json" };
     await axios
       .post(
-        "http://localhost:8001/api/subscriptions/addbulksubscriptions",
+        `${BASEURL}/subscriptions/addbulksubscriptions`,
         addSubs
       )
       .then((res) => {

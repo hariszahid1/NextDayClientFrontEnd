@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import "./CookingRoundTable.css";
 import axios from "axios";
+import { BASEURL } from '../utils/Apis';
 export default function CookingRoundTable({
   TableData,
   portion,
@@ -144,11 +145,11 @@ export default function CookingRoundTable({
     // setTableData(updatedTableData1);
     // console.log(updatedTableData1);
     const header = { "Content-Type": "application/json" };
-    const demoUrl = `http://localhost:8001/api/rounds/editRound/${apiData._id}`;
+    const demoUrl = `${BASEURL}/rounds/editRound/${apiData._id}`;
     console.log(demoUrl);
     axios
       .patch(
-        `http://localhost:8001/api/rounds/editRound/${apiData._id}`,
+        `${BASEURL}/rounds/editRound/${apiData._id}`,
         updatedApiData,
         header
       )
@@ -167,7 +168,7 @@ export default function CookingRoundTable({
     const header = { "Content-Type": "application/json" };
     await axios
       .post(
-        `http://localhost:8001/api/rounds/editRound/${updatedApiData._id}`,
+        `${BASEURL}/rounds/editRound/${updatedApiData._id}`,
         updatedApiData,
         header
       )

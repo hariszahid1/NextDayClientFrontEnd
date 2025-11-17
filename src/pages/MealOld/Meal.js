@@ -8,6 +8,7 @@ import Col from "react-bootstrap/esm/Col";
 import MealForm from "./MealForm";
 import {  useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 
 const Meal = () => {
   const [list, setList] = useState([]);
@@ -24,7 +25,7 @@ const Meal = () => {
     GetMeals();
   };
   const GetMeals = async () => {
-    await axios.get(`http://localhost:8001/api/meals/getmeals`).then((res) => {
+    await axios.get(`${BASEURL}/meals/getmeals`).then((res) => {
       setList(res.data);
       //console.log(res.data);
     });

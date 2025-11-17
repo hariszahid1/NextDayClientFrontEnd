@@ -25,7 +25,7 @@ function MealModalType1({ carbs,closeModal, setNewCarbMeal, addedMeal, setAddedM
   useEffect(() => {
     const GetAllMeals = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/getMeal/All`)
+        .get(`${BASEURL}/meals/getMeal/All`)
         .then((res) => {
           const mealList = res.data.map((data) => {
             return { ...data, id: data._id, name: data.mealName };

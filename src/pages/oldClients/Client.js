@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { toastmessage } from "../../components/ToastMessage/toast";
 import "./Client.css";
 import axios from "axios";
+import { BASEURL } from '../../utils/Apis';
 
 function Client() {
   const [list, setList] = useState([]);
@@ -31,7 +32,7 @@ function Client() {
     const addNew = {clientId, name, phoneNumber};
     const header = { "Content-Type": "application/json" };
 
-    await axios.post(`http://localhost:8001/api/clients/addclient`, addNew, header).then((res)=>{
+    await axios.post(`${BASEURL}/clients/addclient`, addNew, header).then((res)=>{
       console.log(res.data)
     })
 
@@ -40,7 +41,7 @@ function Client() {
 
   const HandleUpdateList = async (id) => {
     console.log(id)
-      await axios.patch(`http://localhost:8001/api/clients/updateclient/${id}`).then((res)=>{
+      await axios.patch(`${BASEURL}/clients/updateclient/${id}`).then((res)=>{
         //setClientId(res.data.clientId)
         setName(res.data.name)
         setPhoneNumber(res.data.phoneNumber)
@@ -60,13 +61,13 @@ function Client() {
    
 
   const HandleDeleteItem = async (id) => {
-    await axios.delete(`http://localhost:8001/api/clients/deleteclient/${id}`);
+    await axios.delete(`${BASEURL}/clients/deleteclient/${id}`);
     GetAllClients()
     toastmessage("User has been Deleted", "success");
   };
   const GetAllClients = async () => {
     await axios
-      .get(`http://localhost:8001/api/clients/getallclients`)
+      .get(`${BASEURL}/clients/getallclients`)
       .then((res) => {
         setList(res.data);
       });

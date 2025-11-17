@@ -28,7 +28,7 @@ function SubscriptionThursdayMealModal({ ThursdayMeal, setThursday, closeModal }
   useEffect(() => {
     const GetAllMeals = async () => {
       await axios
-        .get(`http://localhost:8001/api/meals/getMeal/All`)
+        .get(`${BASEURL}/meals/getMeal/All`)
         .then((res) => {
           const mealList = res.data.map((data) => {
             return { ...data, name: data.mealName };
