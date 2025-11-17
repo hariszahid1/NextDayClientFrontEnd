@@ -1,0 +1,223 @@
+/* nutrition-calculator.css */
+.nutrition-calculator * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nutrition-calculator {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.nutrition-calculator .container {
+    /* Make the inner container stretch to the available card width */
+    max-width: none;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.nutrition-calculator header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+}
+
+.nutrition-calculator h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.nutrition-calculator .calculator {
+    display: grid;
+    /* give more room to the input section so the layout fills the card better */
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+    padding: 28px 36px;
+}
+
+@media (max-width: 768px) {
+    .nutrition-calculator .calculator {
+        grid-template-columns: 1fr;
+    }
+}
+
+.nutrition-calculator .input-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+}
+
+.nutrition-calculator .result-section {
+    background-color: #f9f9f9;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+}
+
+.nutrition-calculator .form-group {
+    margin-bottom: 15px;
+}
+
+.nutrition-calculator label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nutrition-calculator input, 
+.nutrition-calculator select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.nutrition-calculator .radio-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.nutrition-calculator .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nutrition-calculator .radio-option input {
+    width: auto;
+}
+
+.nutrition-calculator .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.nutrition-calculator button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nutrition-calculator .calculate-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nutrition-calculator .clear-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.nutrition-calculator .result-box {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.nutrition-calculator .result-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.nutrition-calculator .result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.nutrition-calculator .result-label {
+    font-weight: 500;
+}
+
+.nutrition-calculator .result-value {
+    font-weight: bold;
+}
+
+.nutrition-calculator .result-range {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.nutrition-calculator .diet-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.nutrition-calculator .diet-type {
+    padding: 8px 15px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #ddd;
+}
+
+.nutrition-calculator .diet-type.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.nutrition-calculator .note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.nutrition-calculator .unit-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.nutrition-calculator .unit-option {
+    padding: 5px 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.nutrition-calculator .unit-option.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nutrition-calculator .hidden {
+    display: none;
+}
+
+/* settings link removed */
+
+.nutrition-calculator .exercise-note {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}

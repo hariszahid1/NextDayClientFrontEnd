@@ -1,0 +1,75 @@
+:root{
+	--brand: #FF3B30;
+	--muted: #6b7280;
+}
+
+.registerGrid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;background:linear-gradient(180deg,#fbfbfd 0%, #f3f4f6 100%)}
+.leftCol{display:flex;align-items:center;justify-content:center;padding:4rem}
+.rightCol{background:var(--Background-grey,#f4f5fa);position:relative}
+
+.cardWrap{max-width:760px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88));backdrop-filter:blur(6px);box-shadow:0 22px 80px rgba(15,23,42,0.12);border-radius:22px;padding:3rem;transform:translateY(-2.5rem);transition:transform .18s ease}
+
+/* When calculator-center is applied (step 4), make the content centered and roomier */
+.cardWrap.calculator-center{max-width:1200px;padding:2.5rem 4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateY(0)}
+.cardWrap.calculator-center .cardHeader{align-items:center;text-align:center}
+.cardWrap.calculator-center .cardTitle{font-size:24px}
+.cardWrap.calculator-center .stepPane{width:100%;max-width:900px}
+.cardWrap.calculator-center .stepsIndicator{display:none}
+.cardWrap.calculator-center .stepPane .primaryButton{width:160px}
+.cardHeader{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:14px}
+.logoImg{width:150px;height:auto;margin-bottom:8px}
+.cardTitle{font-size:22px;margin:0;color:#111827;font-weight:800}
+.cardSubtitle{margin:0;color:var(--muted);font-size:15px}
+
+.stepsIndicator{display:flex;align-items:center;gap:8px;margin:18px 0}
+.stepDot{width:30px;height:30px;border-radius:999px;background:#eee;color:#666;display:flex;align-items:center;justify-content:center;font-weight:700}
+.stepDot.active{background:var(--brand);color:#fff;box-shadow:0 6px 18px rgba(255,59,48,0.18)}
+.stepLine{height:4px;background:#eee;flex:1;border-radius:99px}
+.stepLine.active{background:linear-gradient(90deg,var(--brand),#ff7b6b)}
+
+.stepPane{display:flex;flex-direction:column;gap:12px}
+.label{font-size:14px;color:#374151;font-weight:600}
+.desc{font-size:14px;color:var(--muted);margin-bottom:6px}
+.input{width:100%;height:52px;padding:12px 16px;border-radius:14px;border:1px solid #e6e9ee;margin-bottom:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);font-size:15px}
+.input:focus{outline:none;box-shadow:0 6px 18px rgba(99,102,241,0.06);border-color:#e2e8f0}
+
+.primaryButton{background:var(--brand);color:#fff;border-radius:14px;height:54px;width:100%;display:flex;align-items:center;justify-content:center;border:none;font-weight:800;cursor:pointer;transition:all .18s ease}
+.primaryButton:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,59,48,0.12)}
+.primaryButton.disabled{background:#f3f4f6;color:#9ca3af;cursor:not-allowed;box-shadow:none;transform:none}
+
+.subText{font-size:13px;color:var(--muted)}
+.linkText{color:var(--brand);background:none;border:none;font-weight:700;cursor:pointer}
+
+.phoneLogo{position:relative;top:10rem;left:5rem}
+.signInImg{width:184px;height:359px}
+.signInImg1{position:relative;left:11rem;bottom:21rem;height:349px}
+.NextDayLogo{display:flex;width:200px;height:65px}
+.nextDayPosition{position:relative;bottom:26rem;left:18rem}
+.mealNextDay{color:var(--Dark,#333);font-family:SF UI Text;font-size:45px;font-weight:700;width:410px}
+.mealNextDayDesc{color:var(--Dark,#333);font-size:15px;width:280px}
+
+.mapWrapper{position:absolute;left:0;right:0;bottom:0;height:50vh;padding:1rem}
+.mapWrapperFull{position:absolute;left:0;right:0;bottom:0;top:0}
+.mapPreview{height:220px;border-radius:12px;overflow:hidden;border:1px solid #e6e9ee;margin:8px 0}
+.mapOnlyNote{padding:1rem;color:var(--muted)}
+
+@media only screen and (max-width: 900px){
+	.registerGrid{grid-template-columns:1fr}
+	.rightCol{display:none}
+	.mapWrapper{display:none}
+	.cardWrap{padding:2rem;border-radius:16px;transform:none}
+}
+
+/* When the registerGrid has .fullLeft (step 4), hide the right column and make left column full width */
+.registerGrid.fullLeft{grid-template-columns:1fr}
+.registerGrid.fullLeft .rightCol{display:none}
+.registerGrid.fullLeft .leftCol{padding:2.5rem 2rem}
+.registerGrid.fullLeft .cardWrap{max-width:1300px;margin:0 auto;width:95%}
+
+@media only screen and (max-width: 480px){
+	.cardWrap{padding:1.25rem}
+	.logoImg{width:120px}
+	.cardTitle{font-size:18px}
+	.stepDot{width:26px;height:26px}
+	.mapPreview{height:180px}
+}
