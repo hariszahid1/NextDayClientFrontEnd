@@ -207,7 +207,7 @@ const GoogleMaps = ({ onConfirm, apiKey }) => {
           color: '#856404',
           marginBottom: '10px'
         }}>
-          ⚠️ Google Maps API key is missing. Set REACT_APP_GOOGLE_MAPS_API_KEY in your .env file.
+    
         </div>
       ) : (
         <LoadScript
