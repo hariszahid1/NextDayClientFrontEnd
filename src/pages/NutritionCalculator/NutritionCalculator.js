@@ -178,6 +178,76 @@ const NutritionCalculator = () => {
         setDefaultResults();
     }, []);
 
+    const saveProfile = async () => {
+        // Helper to parse range string like "110 - 307" into {min, max}
+        const parseRange = (rangeStr) => {
+            if (!rangeStr || typeof rangeStr !== 'string') return { min: null, max: null };
+            const parts = rangeStr.split('-').map(s => s.replace(/[^0-9]/g, '').trim()).filter(Boolean);
+            const min = parts[0] ? parseInt(parts[0], 10) : null;
+            const max = parts[1] ? parseInt(parts[1], 10) : null;
+            return { min, max };
+        };
+
+        // Build nutrition object from results using value + parsed min/max
+        const proteinRange = parseRange(results.protein?.range);
+        const carbsRange = parseRange(results.carbs?.range);
+        const fatRange = parseRange(results.fat?.range);
+
+        // Map activity numeric value to descriptive label
+        const activityLabels = {
+            '1.2': 'Sedentary: little or no exercise',
+            '1.375': 'Light: exercise 1-3 times/week',
+            '1.55': 'Moderate: exercise 4-5 times/week',
+            '1.725': 'Active: daily exercise or intense exercise 3-4 times/week',
+            '1.9': 'Very Active: intense exercise 6-7 times/week'
+        };
+
+        const nutrition = {
+            calories: results.calories || 0,
+            protein: { value: results.protein?.value || 0, min: proteinRange.min, max: proteinRange.max },
+            carbs: { value: results.carbs?.value || 0, min: carbsRange.min, max: carbsRange.max },
+            fat: { value: results.fat?.value || 0, min: fatRange.min, max: fatRange.max }
+        };
+        // Use descriptive activity label for storing
+        const activityLabel = activityLabels[String(formData.activity)] || String(formData.activity);
+        try {
+            const goalLabels = {
+                maintain: 'Maintain weight',
+                lose: 'Lose weight',
+                gain: 'Gain weight'
+            };
+
+            const payload = {
+                age: formData.age,
+                gender: formData.gender,
+                height: formData.height,
+                weight: formData.weight,
+                activity: activityLabel,
+                goal: goalLabels[String(formData.goal)] || String(formData.goal),
+                dietType,
+                nutrition
+            };
+
+            const resp = await fetch('/api/nutrition/profiles', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (resp.ok) {
+                await resp.json();
+                alert('Profile saved successfully');
+            } else {
+                const err = await resp.json();
+                console.error('Save failed', err);
+                alert('Failed to save profile');
+            }
+        } catch (error) {
+            console.error('Network error saving profile', error);
+            alert('Network error saving profile');
+        }
+    };
+
     const handleDietTypeChange = (type) => {
         setDietType(type);
     };
@@ -441,6 +511,14 @@ const NutritionCalculator = () => {
                                 else if (e.key === 'ArrowUp') { e.preventDefault(); focusElement(calculateRef); }
                             }
                         }, 'Clear')
+                        ,React.createElement('button', {
+                            className: 'next-btn',
+                            onClick: saveProfile,
+                            onKeyDown: (e) => {
+                                if (e.key === 'Enter') { e.preventDefault(); saveProfile(); }
+                                else if (e.key === 'ArrowUp') { e.preventDefault(); focusElement(calculateRef); }
+                            }
+                        }, 'Next')
                     )
                 ),
                 
