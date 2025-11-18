@@ -365,18 +365,18 @@ const NutritionCalculator = () => {
                     
                     React.createElement('div', { className: 'form-group' },
                         React.createElement('label', { htmlFor: 'height' }, 'Height'),
-                        React.createElement('div', { style: { display: 'flex', gap: '10px' } },
+                        React.createElement('div', { className: 'input-row' },
                             React.createElement('input', {
                                 type: 'number',
                                 id: 'height',
                                 name: 'height',
                                 value: formData.height,
                                 onChange: handleInputChange,
-                                style: { flex: 1 },
+                                className: 'input-field',
                                 ref: heightRef,
                                 onKeyDown: (e) => handleKeyNav(e, genderRef, weightRef)
                             }),
-                            React.createElement('select', { id: 'height-unit', style: { width: '80px' } },
+                            React.createElement('select', { id: 'height-unit', className: 'unit-select' },
                                 React.createElement('option', { value: 'cm' }, 'cm')
                             )
                         )
@@ -384,18 +384,18 @@ const NutritionCalculator = () => {
                     
                     React.createElement('div', { className: 'form-group' },
                         React.createElement('label', { htmlFor: 'weight' }, 'Weight'),
-                        React.createElement('div', { style: { display: 'flex', gap: '10px' } },
+                        React.createElement('div', { className: 'input-row' },
                             React.createElement('input', {
                                 type: 'number',
                                 id: 'weight',
                                 name: 'weight',
                                 value: formData.weight,
                                 onChange: handleInputChange,
-                                style: { flex: 1 },
+                                className: 'input-field',
                                 ref: weightRef,
                                 onKeyDown: (e) => handleKeyNav(e, heightRef, activityRef)
                             }),
-                            React.createElement('select', { id: 'weight-unit', style: { width: '80px' } },
+                            React.createElement('select', { id: 'weight-unit', className: 'unit-select' },
                                 React.createElement('option', { value: 'kg' }, 'kg')
                             )
                         )

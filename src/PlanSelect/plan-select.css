@@ -642,15 +642,16 @@
 }
 @media only screen and (max-width: 600px) {
   .mealBox {
-    width: 90vw !important;
-    height: 14vh !important;
+    width: calc(100% - 2rem) !important;
+    height: auto !important;
     position: relative !important;
     left: 1rem;
     margin: 0.5rem;
   }
   .menuPlan {
-    width: 27vw;
-    height: 13vh;
+    width: 0;
+    height: 0;
+    display: none;
   }
   .heading1 {
     font-size: 20px;
@@ -665,8 +666,8 @@
     height: 32px !important;
     bottom: 2rem;
     position: relative !important; */
-    width: 25vw !important;
-    height: 3vh !important;
+    width: 100% !important;
+    height: 44px !important;
     bottom: 2rem;
     position: relative !important;
   }
@@ -692,8 +693,8 @@
     flex-shrink: 0;
   }
   .stage2mainContainer {
-    margin-top: 2rem !important;
-    margin-left: 100px;
+    margin-top: 1.5rem !important;
+    margin-left: 0;
   }
   .planText1 {
     font-size: 24px !important;

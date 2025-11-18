@@ -271,7 +271,9 @@ const GoogleMaps = ({ onConfirm, apiKey }) => {
         display: 'flex',
         gap: '8px',
         marginTop: '10px',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        zIndex: 1200,
+        position: 'relative'
       }}>
         <button
           onClick={handleConfirm}

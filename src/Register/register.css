@@ -55,9 +55,35 @@
 
 @media only screen and (max-width: 900px){
 	.registerGrid{grid-template-columns:1fr}
-	.rightCol{display:none}
+	/* Show right column stacked beneath the card for steps 1-3 */
+	.rightCol{display:block;position:static;padding:1.75rem 1.25rem 2.25rem;margin-top:.75rem;border-top:1px solid #e5e7eb;background:linear-gradient(180deg,#f8f9fb 0%, #f1f3f5 100%)}
 	.mapWrapper{display:none}
-	.cardWrap{padding:2rem;border-radius:16px;transform:none}
+	/* Hide promo images on small screens to maximize space for the card */
+	.phoneLogo { display: none; }
+	.signInImg, .signInImg1 { display: none; }
+	.cardWrap{padding:2rem 1.5rem;border-radius:18px;transform:none;box-shadow:0 12px 40px rgba(15,23,42,0.1)}
+	.phoneLogo{position:static;display:flex;justify-content:center;align-items:flex-end;gap:28px;margin-bottom:1.5rem}
+	.signInImg{width:120px;height:auto;animation:fadeUp .65s ease both}
+	.signInImg1{width:110px;height:auto;animation:fadeUp .85s ease both}
+	.nextDayPosition{position:static;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp .9s ease both}
+	.mealNextDay{font-size:30px;width:auto;max-width:420px;line-height:1.15;animation:scaleIn .7s ease both}
+	.mealNextDayDesc{width:100%;max-width:360px}
+}
+
+/* Tablet refinement */
+@media only screen and (max-width: 1200px){
+	.leftCol{padding:3rem}
+	.cardWrap{max-width:860px}
+}
+
+/* Nutrition calculator (step 4) responsive tuning inside register */
+.registerGrid.fullLeft .cardWrap.calculator-center .nutrition-calculator { padding:0; }
+.registerGrid.fullLeft .cardWrap.calculator-center .nutrition-calculator .container { width:100%; border-radius:18px; }
+
+@media only screen and (max-width: 700px){
+	.registerGrid.fullLeft .leftCol{padding:1.5rem 1.25rem}
+	.registerGrid.fullLeft .cardWrap.calculator-center{padding:1.25rem 1rem;border-radius:14px;max-width:100%;}
+	.registerGrid.fullLeft .cardWrap.calculator-center .nutrition-calculator .container{border-radius:12px;box-shadow:none;}
 }
 
 /* When the registerGrid has .fullLeft (step 4), hide the right column and make left column full width */
@@ -72,4 +98,26 @@
 	.cardTitle{font-size:18px}
 	.stepDot{width:26px;height:26px}
 	.mapPreview{height:180px}
+	.rightCol{padding:1.25rem 0.9rem 2rem}
+	.mealNextDay{font-size:26px}
 }
+
+@media only screen and (max-width: 420px){
+    .leftCol{padding:1.1rem 0.75rem}
+    .cardWrap{padding:1rem 0.75rem;border-radius:12px}
+    .cardSubtitle{font-size:14px}
+    .primaryButton{height:50px;font-size:14px}
+    .input{height:48px;font-size:14px}
+}
+
+/* Map full screen variant for step 3 on mobile */
+@media only screen and (max-width: 900px){
+	.mapWrapperFull{position:static;height:auto;min-height:420px;margin-top:1rem;border-radius:16px;overflow:visible;box-shadow:0 10px 28px rgba(0,0,0,0.08);padding-bottom:18px}
+}
+
+/* Animations */
+@keyframes fadeUp {from {opacity:0;transform:translateY(16px)} to {opacity:1;transform:translateY(0)}}
+@keyframes scaleIn {from {opacity:0;transform:scale(.92)} to {opacity:1;transform:scale(1)}}
+
+.anim-fade-up{animation:fadeUp .6s ease both}
+.anim-scale-in{animation:scaleIn .6s ease both}
