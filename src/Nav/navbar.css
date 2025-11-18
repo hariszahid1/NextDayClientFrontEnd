@@ -7,19 +7,19 @@
     left: 16rem;
     gap: 3rem;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     .navLogo {
      display: none;
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     .mobileNavLogo {
         width: 164px;
         height: 21.564px;
         margin-right: 2rem;
             }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     .handleRegister{
         display: flex;
         position: relative;
@@ -27,11 +27,38 @@
         gap: 1rem;
     }
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
+    .mobileMenuButton{ margin-left: auto; }
+  }
+  @media only screen and (max-width: 767px) {
     .menuClick{
         font-size: 16px;
     }
   }
+  /* Hide the header Register link on small screens - register is available in the mobile menu */
+  @media only screen and (max-width: 767px) {
+    .handleRegister { display: none !important; }
+  }
+
+/* Also hide Register header on tablet widths up to the lg breakpoint so the hamburger-only view is consistent
+   This covers the 772px-1016px range you reported (and stays hidden up to 1024px). */
+@media only screen and (max-width: 1024px) {
+  .handleRegister { display: none !important; }
+}
+
+/* Attach hamburger to the far right of the header for tablet+mobile sizes */
+@media only screen and (max-width: 1024px) {
+  header > nav { position: relative; }
+  .mobileMenuButton {
+    position: absolute !important;
+    right: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-left: 0 !important;
+  }
+  /* ensure mobile logo stays flush left */
+  .navLogo, .mobileNavLogo { position: relative; z-index: 2; }
+}
   .menuDivider{
     border: none;
     height: 1px;
