@@ -115,28 +115,26 @@ export default function Register() {
         </div>
       </div>
 
-      <div className="rightCol">
+      <div className="rightCol" aria-label="Promotional visuals and map">
         {step !== 3 && (
-          <>
+          <div className="promoBlock anim-fade-up">
             <div className="phoneLogo">
-              <img src={SignInImg} className="signInImg" alt="" />
-              <img src={SignInImg1} className="signInImg1" alt="" />
+              <img src={SignInImg} className="signInImg" alt="App preview phone 1" />
+              <img src={SignInImg1} className="signInImg1" alt="App preview phone 2" />
             </div>
-            <div className="nextDayPosition">
-              <img src={NextDay} className="NextDayLogo" alt="" />
+            <div className="nextDayPosition anim-scale-in">
+              <img src={NextDay} className="NextDayLogo" alt="NextDay Logo" />
               <div className="mealNextDay">Meals at your fingertips</div>
-              <div className="mealNextDayDesc">With our website you can view menus, select meals and see your scheduled deliveries</div>
+              <div className="mealNextDayDesc">View menus, select meals and see your scheduled deliveries.</div>
             </div>
-          </>
-        )}
-
-        {step === 3 && (
-          <div className="mapWrapperFull">
-            <GoogleMaps onConfirm={(address)=>{ onConfirmLocation(address); }} />
           </div>
         )}
 
-        
+        {step === 3 && (
+          <div className="mapWrapperFull anim-fade-up">
+            <GoogleMaps onConfirm={(address)=>{ onConfirmLocation(address); }} />
+          </div>
+        )}
       </div>
     </div>
   );
