@@ -376,9 +376,7 @@ const NutritionCalculator = () => {
                                 ref: heightRef,
                                 onKeyDown: (e) => handleKeyNav(e, genderRef, weightRef)
                             }),
-                            React.createElement('select', { id: 'height-unit', className: 'unit-select' },
-                                React.createElement('option', { value: 'cm' }, 'cm')
-                            )
+                            React.createElement('div', { className: 'unit-select unit-badge' }, 'cm')
                         )
                     ),
                     
@@ -395,9 +393,7 @@ const NutritionCalculator = () => {
                                 ref: weightRef,
                                 onKeyDown: (e) => handleKeyNav(e, heightRef, activityRef)
                             }),
-                            React.createElement('select', { id: 'weight-unit', className: 'unit-select' },
-                                React.createElement('option', { value: 'kg' }, 'kg')
-                            )
+                            React.createElement('div', { className: 'unit-select unit-badge' }, 'kg')
                         )
                     ),
                     
