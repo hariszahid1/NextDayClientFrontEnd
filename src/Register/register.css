@@ -3,18 +3,61 @@
 	--muted: #6b7280;
 }
 
+/* Stepper styles - copied from plan-select.css */
+.activeStepTitle {
+  color: var(--Red, #d83241);
+  text-align: center;
+  font-family: SF UI Text;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.21px;
+}
+
+.InActiveStepTitle {
+  color: #c9ccce;
+  text-align: center;
+  font-family: SF UI Text;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.21px;
+}
+
+.register-stepper-wrapper {
+	margin-top: 0.5rem;
+	margin-bottom: 1.25rem;
+	width: 100%;
+}
+
+/* Make stepper icons bigger on desktop/laptop for cool look */
+.register-stepper-wrapper .chakra-step__icon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.register-stepper-wrapper .chakra-step__icon img {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.register-stepper-wrapper .chakra-step__separator {
+  margin: 0 1rem !important;
+}
+
 .registerGrid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;background:linear-gradient(180deg,#fbfbfd 0%, #f3f4f6 100%)}
-.leftCol{display:flex;align-items:center;justify-content:center;padding:4rem}
+.leftCol{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;padding:4rem}
 .rightCol{background:var(--Background-grey,#f4f5fa);position:relative}
 
-.cardWrap{max-width:760px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88));backdrop-filter:blur(6px);box-shadow:0 22px 80px rgba(15,23,42,0.12);border-radius:22px;padding:3rem;transform:translateY(-2.5rem);transition:transform .18s ease}
+.cardWrap{max-width:760px;width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.88));backdrop-filter:blur(6px);box-shadow:0 22px 80px rgba(15,23,42,0.12);border-radius:22px;padding:3rem;transition:transform .18s ease;margin-top:0.5rem}
 
 /* When calculator-center is applied (step 4), make the content centered and roomier */
 .cardWrap.calculator-center{max-width:1200px;padding:2.5rem 4rem;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:translateY(0)}
 .cardWrap.calculator-center .cardHeader{align-items:center;text-align:center}
 .cardWrap.calculator-center .cardTitle{font-size:24px}
 .cardWrap.calculator-center .stepPane{width:100%;max-width:900px}
-.cardWrap.calculator-center .stepsIndicator{display:none}
 .cardWrap.calculator-center .stepPane .primaryButton{width:160px}
 .cardHeader{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:14px}
 .logoImg{width:150px;height:auto;margin-bottom:8px}
@@ -68,12 +111,38 @@
 	.nextDayPosition{position:static;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;animation:fadeUp .9s ease both}
 	.mealNextDay{font-size:30px;width:auto;max-width:420px;line-height:1.15;animation:scaleIn .7s ease both}
 	.mealNextDayDesc{width:100%;max-width:360px}
+	/* Stepper responsive */
+	.register-stepper-wrapper {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+	/* Reset stepper size on mobile to default */
+	.register-stepper-wrapper .chakra-step__icon {
+		width: 48px !important;
+		height: 48px !important;
+	}
+	.register-stepper-wrapper .chakra-step__icon img {
+		width: 24px !important;
+		height: 24px !important;
+	}
+	.register-stepper-wrapper .chakra-step__separator {
+		margin: 0 0.5rem !important;
+	}
 }
 
 /* Tablet refinement */
 @media only screen and (max-width: 1200px){
 	.leftCol{padding:3rem}
 	.cardWrap{max-width:860px}
+	/* Stepper icons slightly smaller on tablet */
+	.register-stepper-wrapper .chakra-step__icon {
+		width: 50px !important;
+		height: 50px !important;
+	}
+	.register-stepper-wrapper .chakra-step__icon img {
+		width: 28px !important;
+		height: 28px !important;
+	}
 }
 
 /* Nutrition calculator (step 4) responsive tuning inside register */
@@ -100,6 +169,22 @@
 	.mapPreview{height:180px}
 	.rightCol{padding:1.25rem 0.9rem 2rem}
 	.mealNextDay{font-size:26px}
+	/* Stepper on small mobile */
+	.register-stepper-wrapper {
+		margin-top: 0.75rem;
+		margin-bottom: 1.5rem;
+	}
+	.register-stepper-wrapper .chakra-step__icon {
+		width: 44px !important;
+		height: 44px !important;
+	}
+	.register-stepper-wrapper .chakra-step__icon img {
+		width: 22px !important;
+		height: 22px !important;
+	}
+	.activeStepTitle, .InActiveStepTitle {
+		font-size: 12px !important;
+	}
 }
 
 @media only screen and (max-width: 420px){
@@ -108,6 +193,25 @@
     .cardSubtitle{font-size:14px}
     .primaryButton{height:50px;font-size:14px}
     .input{height:48px;font-size:14px}
+    /* Extra small mobile stepper */
+    .register-stepper-wrapper {
+		margin-top: 0.5rem;
+		margin-bottom: 1.25rem;
+	}
+	.register-stepper-wrapper .chakra-step__icon {
+		width: 40px !important;
+		height: 40px !important;
+	}
+	.register-stepper-wrapper .chakra-step__icon img {
+		width: 20px !important;
+		height: 20px !important;
+	}
+	.register-stepper-wrapper .chakra-step__separator {
+		margin: 0 0.25rem !important;
+	}
+	.activeStepTitle, .InActiveStepTitle {
+		font-size: 11px !important;
+	}
 }
 
 /* Map full screen variant for step 3 on mobile */

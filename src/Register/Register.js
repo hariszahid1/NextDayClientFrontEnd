@@ -1,11 +1,32 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Step,
+  StepDescription,
+  StepIcon,
+  StepIndicator,
+  StepNumber,
+  StepSeparator,
+  StepStatus,
+  StepTitle,
+  Stepper,
+  useSteps,
+  Box,
+  Center,
+} from "@chakra-ui/react";
 import './register.css';
 import SignInImg from '../images/SignIn.png';
 import SignInImg1 from '../images/SignIn1.png';
 import NextDay from '../images/Logo Nextday.png';
 import GoogleMaps from '../components/googleMaps/googleMaps';
 import NutritionCalculator from '../pages/NutritionCalculator/NutritionCalculator';
+import Step1 from '../images/Step1.png';
+import Step2 from '../images/Step2.png';
+import Step3 from '../images/Step3.png';
+import Step4 from '../images/Step4.png';
+import IStep2 from '../images/IStep2.png';
+import IStep3 from '../images/IStep3.png';
+import IStep4 from '../images/IStep4.png';
 
 const stepVariants = {
   enter: { opacity: 0, y: 12 },
@@ -21,9 +42,58 @@ export default function Register() {
 
   const onConfirmLocation = (address) => setSelectedAddress(address || '');
 
+  // Define progress steps - same as weekly menu
+  const steps = [
+    { title: "Start", description: "Contact Info", activeIcon: Step1 },
+    { title: "Customize", description: "Date & Time", activeIcon: Step2, inActive: IStep2 },
+    { title: "Summary", description: "Select Rooms", activeIcon: Step3, inActive: IStep3 },
+    { title: "Checkout", description: "Select Rooms", activeIcon: Step4, inActive: IStep4 },
+  ];
+
+  // Calculate active step index based on current step
+  const getActiveStepIndex = () => {
+    if (step <= 3) return 0; // Steps 1, 2, 3 = "Start"
+    if (step === 4) return 1; // Step 4 = "Customize" (calculator)
+    return 0;
+  };
+
+  const activeStepIndex = getActiveStepIndex();
+
   return (
     <div className={"registerGrid" + (step === 4 ? ' fullLeft' : '')}>
       <div className="leftCol">
+        {/* Progress Tracker - Outside Card - Same as Weekly Menu */}
+        <div className="grid justify-center register-stepper-wrapper">
+          <Stepper size="lg" index={activeStepIndex}>
+            {steps.map((stepItem, index) => (
+              <Step key={index}>
+                <div flexDirection="column">
+                  <StepStatus
+                    complete={
+                      <img
+                        src={stepItem.activeIcon}
+                        alt="Custom Icon"
+                      />
+                    }
+                    incomplete={<img src={stepItem.inActive} />}
+                    active={activeStepIndex === index ? <img src={stepItem.activeIcon} /> : <></>}
+                  />
+
+                  <Box flexShrink="0" flexDirection="column" textAlign="center">
+                    {
+                      activeStepIndex === index ?
+                        <StepTitle className="activeStepTitle">{stepItem.title}</StepTitle>
+                        :
+                        <StepTitle className="InActiveStepTitle">{stepItem.title}</StepTitle>
+                    }
+                  </Box>
+                </div>
+                <StepSeparator />
+              </Step>
+            ))}
+          </Stepper>
+        </div>
+
         <div className={"cardWrap" + (step === 4 ? ' calculator-center' : '')}>
           <div className="cardHeader">
             <img src={NextDay} alt="NextDay" className="logoImg" />
@@ -31,13 +101,16 @@ export default function Register() {
             <p className="cardSubtitle">{step === 3 ? 'We need your delivery location to see if we can deliver fresh meals to you.' : step === 4 ? 'Start your journey to better health with precise nutrition planning.' : 'Welcome! Sign up to continue enjoying your favorite meals.'}</p>
           </div>
 
-          <div className="stepsIndicator">
-            <div className={`stepDot ${step>=1? 'active' : ''}`}>1</div>
-            <div className={`stepLine ${step>1? 'active' : ''}`} />
-            <div className={`stepDot ${step>=2? 'active' : ''}`}>2</div>
-            <div className={`stepLine ${step>2? 'active' : ''}`} />
-            <div className={`stepDot ${step>=3? 'active' : ''}`}>3</div>
-          </div>
+          {/* Old progress tracker - shown for steps 1-3, hidden inside calculator (step 4) */}
+          {step !== 4 && (
+            <div className="stepsIndicator">
+              <div className={`stepDot ${step>=1? 'active' : ''}`}>1</div>
+              <div className={`stepLine ${step>1? 'active' : ''}`} />
+              <div className={`stepDot ${step>=2? 'active' : ''}`}>2</div>
+              <div className={`stepLine ${step>2? 'active' : ''}`} />
+              <div className={`stepDot ${step>=3? 'active' : ''}`}>3</div>
+            </div>
+          )}
 
           <AnimatePresence mode="wait">
             {step === 1 && (
