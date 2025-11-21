@@ -267,46 +267,21 @@ const GoogleMaps = ({ onConfirm, apiKey }) => {
       )}
 
       {/* Controls */}
-      <div style={{
-        display: 'flex',
-        gap: '8px',
-        marginTop: '10px',
-        flexWrap: 'wrap',
-        zIndex: 1200,
-        position: 'relative'
-      }}>
+      <div className="mapControls" style={{ marginTop: '10px' }}>
         <button
           onClick={handleConfirm}
           disabled={loading || !address}
-          style={{
-            flex: 1,
-            background: loading || !address ? '#ccc' : '#d83241',
-            color: 'white',
-            border: 'none',
-            padding: '12px 16px',
-            borderRadius: '6px',
-            cursor: (loading || !address) ? 'not-allowed' : 'pointer',
-            opacity: (loading || !address) ? 0.6 : 1,
-            minWidth: '150px',
-            fontWeight: 'bold'
-          }}
+          className="confirmBtn"
+          style={{ opacity: (loading || !address) ? 0.6 : 1, cursor: (loading || !address) ? 'not-allowed' : 'pointer' }}
         >
           {loading ? 'Loading...' : '✅ Confirm Location'}
         </button>
-        
+
         <button
           onClick={getCurrentLocation}
           disabled={loading}
-          style={{
-            background: '#fff',
-            border: '1px solid #ddd',
-            padding: '12px 16px',
-            borderRadius: '6px',
-            cursor: loading ? 'not-allowed' : 'pointer',
-            opacity: loading ? 0.6 : 1,
-            minWidth: '120px',
-            fontWeight: 'bold'
-          }}
+          className="currentLocBtn"
+          style={{ opacity: loading ? 0.6 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}
         >
           {loading ? '🔄' : '📍 Current Location'}
         </button>

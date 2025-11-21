@@ -168,9 +168,9 @@ export default function Register() {
                 className="stepPane"
               >
                 <h2 className="label">Set your delivery location</h2>
-                <p className="desc">Drag the pin on the map on the right to mark your location.</p>
+                <p className="desc">Edit the address manually or drag the pin on the map to mark your location.</p>
                 <label className="label">Address</label>
-                <input className="input" placeholder="Address will appear here after confirm" value={selectedAddress} readOnly />
+                <input className="input" placeholder="Enter or confirm address" value={selectedAddress} onChange={e=>setSelectedAddress(e.target.value)} />
                 <button
                   className={`primaryButton ${selectedAddress? '' : 'disabled'}`}
                   onClick={() => selectedAddress ? setStep(4) : null}
@@ -205,7 +205,9 @@ export default function Register() {
 
         {step === 3 && (
           <div className="mapWrapperFull anim-fade-up">
-            <GoogleMaps onConfirm={(address)=>{ onConfirmLocation(address); }} />
+            <div className="mapCard">
+              <GoogleMaps onConfirm={(address)=>{ onConfirmLocation(address); }} />
+            </div>
           </div>
         )}
       </div>
